@@ -1,0 +1,62 @@
+{
+  "name": "simply.monitor-node",
+  "version": "1.0.0",
+  "description": "Node JS monitor examples and simple modules",
+  "main": "main.js",
+  "scripts": {
+    "watch": "nodemon -w & node main.js 3000 -e html,js,css,txt,json,js,ts,md",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhorton34/simply.monitor-node.git"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "monitor",
+    "examples"
+  ],
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      ".git",
+      "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "execMap": {
+      "js": "node --harmony main.js 3000"
+    },
+    "events": {
+      "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+    },
+    "watch": [
+      "dummy/",
+      "files/",
+      "main.js",
+      "watch/files/",
+      "test/fixtures/",
+      "test/samples/"
+    ],
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "ext": "js,json,txt,md"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.4",
+    "send": "^0.17.1",
+    "vuejs-form": "^1.2.9",
+    "vuejs-validators": "^1.1.7"
+  },
+  "devDependencies": {
+    "collect.js": "^4.28.2",
+    "laravel-js-str": "^1.0.6"
+  },
+  "author": "zhorton999@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhorton34/simply.monitor-node/issues"
+  },
+  "homepage": "https://github.com/zhorton34/simply.monitor-node#readme"
+}
